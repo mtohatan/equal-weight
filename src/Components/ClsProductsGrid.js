@@ -74,7 +74,7 @@ class ClsProductsGrid extends React.Component {
     const originalItem = getItems().find(
       (p) => p.ProductID === dataItem.ProductID
     );
-    const newData = this.data.map((item) =>
+    const newData = this.state.data.map((item) =>
       item.ProductID === originalItem.ProductID ? originalItem : item
     );
     this.setState({ data: newData });
